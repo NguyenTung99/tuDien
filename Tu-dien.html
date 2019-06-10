@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input type=text id='Chu'>
+<button type="button" onclick="Dich()">Tra từ điển</button>
+<div id='Show'></div>
+<script>
+    function Dich() {
+        let ChuDich = document.getElementById('Chu');
+        let TiengAnh = ['hello', 'year', 'moutain', 'bag', 'windown'];
+        let TiengViet = ['xin chào', 'năm', 'núi', 'cặp', 'cửa sổ'];
+        for (let x = 0; x < TiengAnh.length; x++) {
+            if (ChuDich.value == TiengAnh[x]) {
+                document.getElementById('Show').innerHTML = TiengAnh[x] + '=' + TiengViet[x];
+                break;
+            } else {
+                document.getElementById('Show').innerHTML = 'Không tìm thấy';
+            }
+        }
+    }
+</script>
+</body>
+</html>
